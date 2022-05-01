@@ -5,7 +5,19 @@ class Kayttoliittyma():
         self.tk = Tietokanta()
         self.lueSyote()
 
+    def printHelp(self):
+        print("""
+        Toimintokomennot, syötä numero valitaksesi toiminnon:
+        1 - Tulosta kaikkien myönnettyjen opintopisteiden määrän valitulta vuodelta
+        2 - Tulosta valitun opiskelijan opintosuoritukset
+        3 - Tulosta valitun kurssin myönnettyjen suoritusten keskiarvo
+        4 - Tulosta lista eniten opintopisteitä myöntäneistä opettajista
+        5 - Lopeta ohjelma
+        """)
+
+
     def lueSyote(self):
+        self.printHelp()
         while True:
             syote = input("Valitse toiminto: ")
 
